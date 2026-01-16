@@ -5,7 +5,7 @@
 #include "../../assignment-autotest/test/assignment1/username-from-conf-file.h"
 
 /**
-* This function should:
+* This function:
 *   1) Call the my_username() function in autotest-validate.c to get your hard coded username.
 *   2) Obtain the value returned from function malloc_username_from_conf_file() in username-from-conf-file.h within
 *       the assignment autotest submodule at assignment-autotest/test/assignment1/
@@ -14,9 +14,5 @@
 */
 void test_validate_my_username()
 {
-    /**
-     * TODO: Replace the line below with your code here as described above to verify your /conf/username.txt 
-     * config file and my_username() functions are setup properly
-     */
-    TEST_ASSERT_TRUE_MESSAGE(false,"AESD students, please fix me!");
+    TEST_ASSERT_EQUAL_STRING_MESSAGE(my_username(), malloc_username_from_conf_file(),"ERROR: Usernames do not equal each other!");
 }
